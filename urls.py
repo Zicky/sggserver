@@ -17,4 +17,5 @@ urlpatterns = patterns('',
 
     #url(r'^location$', 'location.views.BinLocs'),
     url(r'^binloc$', 'sggserver.location.views.bin_locs'),
+    url(r'^srequest$', 'sggserver.srequest.view.get_post'),
 )
