@@ -11,10 +11,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', #'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'sgg',                      # Or path to database file if using sqlite3.
-        'USER': 'huangzi',                      # Not used with sqlite3.
-        'PASSWORD': 'huangzi@sgg@osu.edu',                  # Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', #'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'dblocsql',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -28,6 +28,15 @@ DATABASES = {
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
 TIME_ZONE = 'America/Chicago'
+
+#**************************setting for email**************************
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sarah.huangzq@gmail.com'
+EMAIL_HOST_PASSWORD = 'X_05640103'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+#*******************************************************************
+
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -109,19 +118,20 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    #'django.contrib.auth',
-    #'django.contrib.contenttypes',
-    #'django.contrib.sessions',
-    #'django.contrib.sites',
-    #'django.contrib.messages',
-    #'django.contrib.staticfiles',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    #'django.contrib.admindocs',
     'location',
     'srequest',
     'search',
+    'matrix',
 )
 
 # A sample logging configuration. The only tangible logging

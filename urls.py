@@ -1,8 +1,8 @@
 from django.conf.urls.defaults import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -13,9 +13,10 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 
     #url(r'^location$', 'location.views.BinLocs'),
     url(r'^binloc$', 'sggserver.location.views.bin_locs'),
-    url(r'^srequest$', 'sggserver.srequest.view.get_post'),
+    url(r'^srequest$', 'sggserver.srequest.views.get_post'),
+    url(r'^matrix$', 'sggserver.matrix.views.get_matrix'),
 )
