@@ -13,9 +13,12 @@ def get_matrix(request):
     return HttpResponse(ret)
 
 def encode(mat):
-    json_list = []
+    ret = {}
     for each in mat:
-        item = {'name':each.name, 'percentage':float(each.percent), 'changes':float(each.change), 'month':each.month, 'year':each.year}
-        json_list.append(item)
-    ret = json.dumps(json_list)
+        item = {'percentage':float(each.percent), \
+                'changes':float(each.change), \
+                'month':each.month, \
+                'year':each.year}
+        ret[each.name] = item
+    ret = json.dumps(ret)
     return ret
