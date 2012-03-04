@@ -15,10 +15,16 @@ def get_matrix(request):
 def encode(mat):
     ret = {}
     for each in mat:
-        item = {'percentage':float(each.percent), \
-                'changes':float(each.change), \
-                'month':each.month, \
-                'year':each.year}
+        if each.name == 'DIVERSION':
+            item = {'Percentage':float(each.percent), \
+                'Changes':float(each.change), \
+                'Month':each.month, \
+                'Year':each.year}
+        else:
+            item = {'Amount':float(each.percent), \
+                'Changes':float(each.change), \
+                'Month':each.month, \
+                'Year':each.year}
         ret[each.name] = item
     ret = json.dumps(ret)
     return ret
