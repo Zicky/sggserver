@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     'srequest',
     'search',
     'matrix',
+    'zerow',
 )
 
 # A sample logging configuration. The only tangible logging

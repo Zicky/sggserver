@@ -19,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^binloc$', 'sggserver.location.views.bin_locs'),
     url(r'^srequest$', 'sggserver.srequest.views.get_post'),
     url(r'^matrix$', 'sggserver.matrix.views.get_matrix'),
+    url(r'^zerow$', 'sggserver.zerow.views.get_text'),
 )
