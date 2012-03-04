@@ -15,13 +15,13 @@ def get_matrix(request):
 def encode(mat):
     ret = {}
     for each in mat:
-        if each.name == 'DIVERSION':
+        if each.name == 'diversion':
             item = {'Percentage':float(each.percent), \
                 'Changes':float(each.change), \
                 'Month':each.month, \
                 'Year':each.year}
         else:
-            item = {'Amount':float(each.percent), \
+            item = {'Amount':str(float(each.percent))+' '+'tons', \
                 'Changes':float(each.change), \
                 'Month':each.month, \
                 'Year':each.year}
