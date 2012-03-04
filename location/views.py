@@ -5,11 +5,10 @@ from django.core.urlresolvers import reverse
 from location.models import BinLocation
 import json
 
-def nearest_bin(self_lng, self_lat):
-    loc_lng = sele_lng + 1
-    loc_lat = self_lat + 1
-    ret = json.dumps({'longitude': loc_lng, 'latitude': loc_lat})
-    return HttpResponse(ret)
+#def nearest_bin(request):
+#    loc_lng = 
+#    loc_lat = 
+#    return HttpResponse(ret)
 
 def test_def(request):
     return HttpResponseForbidden('First Step Succeed\r\n')
