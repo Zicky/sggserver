@@ -21,7 +21,7 @@ def encode(mat):
                 'Month':each.month, \
                 'Year':each.year}
         else:
-            item = {'Amount':str(float(each.percent))+' '+'tons', \
+            item = {'Amount':float(each.percent), \
                 'Changes':float(each.change), \
                 'Month':each.month, \
                 'Year':each.year}
