@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'search',
     'matrix',
     'zerow',
+    'metrics',
 )
 
 # A sample logging configuration. The only tangible logging

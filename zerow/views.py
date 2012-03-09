@@ -13,10 +13,9 @@ def get_text(request):
     return HttpResponse(ret)
 
 def encode(t):
-    ret = {}
-    i = 0
+    ret = []
     for each in t:
-        ret[i] = each.text
-        i += 1
+        item = {'text':each.text}
+	ret.append(item)
     ret = json.dumps(ret)
-
+    return ret

@@ -20,4 +20,5 @@ urlpatterns = patterns('',
     url(r'^srequest$', 'sggserver.srequest.views.get_post'),
     url(r'^matrix$', 'sggserver.matrix.views.get_matrix'),
     url(r'^zerow$', 'sggserver.zerow.views.get_text'),
+    url(r'^metrics$', 'sggserver.metrics.views.get_metrics'),
 )
